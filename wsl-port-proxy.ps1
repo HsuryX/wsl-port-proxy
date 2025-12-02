@@ -69,6 +69,8 @@ foreach ($Port in $Ports) {
         Write-Warning "Port $Port forwarding failed. netsh exit code: $LASTEXITCODE"
     }
 }
+
+wsl.exe
 '@
 
 $PortProxyScriptContent = $PortProxyScriptContent -replace '\{PORTS\}', $PortsText
